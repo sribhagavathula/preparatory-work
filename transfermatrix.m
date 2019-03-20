@@ -1,0 +1,9 @@
+L_old1=cell2mat(leadfieldold.leadfield);
+L_new1=cell2mat(leadfieldnew.leadfield);
+[U,W,V]=svd(L_old1);   %Singular Value Decomposition of the original electrode set
+threshold=sum(W( : ))/1000; %Regularisation of the off-diagonal parts of the matrix W
+W(W<threshold)=0;  %All the values of W are set to 0 apart from the main diagoanl
+L_old=U*W*V';
+Transfermatrix=L_new1*pinv(L_old); %Pseudo-inverse of the original Leadfield is calculated
+L_new=Transfermatrix*L_old; % The final leadfield
+F_new=Transfermatrix*F_old;    

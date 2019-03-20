@@ -1,0 +1,8 @@
+~*
+*.tmp
+*.eps
+*.fig
+*.pdf
+*.mat
+*.docx
+*.jpg

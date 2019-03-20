@@ -1,0 +1,13 @@
+ cfg=[];
+cfg.latency='all';
+cfg.numdipoles=1;
+cfg.symmetry=[];
+cfg.nonlinear='no';
+cfg.gridsearch='no';
+cfg.dip.pos=sourcemodel.pos(1,:);
+cfg.senstype='eeg';
+cfg.headmodel=Standard2;
+cfg.channel='all';
+cfg.model='regional';
+cfg.elec=elec64;
+source_all=ft_dipolefitting(cfg,avg1);
