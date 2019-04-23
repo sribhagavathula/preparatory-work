@@ -1,0 +1,11 @@
+# Volume conductor with 3 boundaries
+NumberBoundaries=	3
+UnitConduct	S/m
+Conductivities
+0.33	0.0042	0.33	
+WhereInside
+0	1	2	
+Boundary1	standard2-1.bnd
+Boundary2	standard2-2.bnd
+Boundary3	standard2-3.bnd
+Matrix		standard2.mat
